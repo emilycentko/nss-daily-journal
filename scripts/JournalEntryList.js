@@ -19,6 +19,7 @@ export const EntryListComponent = () => {
             Invoke the component that returns an
             HTML representation of a single entry
         */
-        entryLog.innerHTML += ???
+       let DOMString = JournalEntryComponent(entry)
+        entryLog.innerHTML += DOMString
     }
 }
