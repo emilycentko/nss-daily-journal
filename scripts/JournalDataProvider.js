@@ -7,29 +7,7 @@
  */
 
 // This is the original data.
-const journal = [
-    {
-        id: 1,
-        date: "01/4/2021",
-        concept: "HTML & CSS",
-        entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-        mood: "Good"
-    },
-    {
-        id: 2,
-        date: "1/7/2021",
-        concept: "GitHub Workflow",
-        entry: "Worked on indivdual and group project GitHub workflow for pushing branches from command to GitHub",
-        mood: "Ok"
-    },
-    {
-        id: 3,
-        date: "1/14/2021",
-        concept: "Java Script",
-        entry: "Exporting data from mulitple objects and functions in JavaScript",
-        mood: "Good"
-    }
-]
+const journal = []
 
 /*
     You export a function that provides a version of the
