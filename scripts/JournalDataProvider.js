@@ -7,16 +7,27 @@
  */
 
 // This is the original data.
-const journal = []
+let journalEntries = []
 
 /*
     You export a function that provides a version of the
     raw data in the format that you want
 */
 export const useJournalEntries = () => {
-    const sortedByDate = journal.sort(
+    const sortedByDate = journalEntries.sort(
         (currentEntry, nextEntry) =>
             Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
     )
     return sortedByDate
+}
+
+export const getEntries = () => {
+    return fetch("http://localhost:8088/entries") // Fetch from the API
+        .then(entries => entries.json())  // Parse as JSON
+        .then(parsedEntries => {
+            // What should happen when we finally have the array?
+            console.table(parsedEntries)
+            journalEntries = parsedEntries
+            return parsedEntries
+        })
 }
