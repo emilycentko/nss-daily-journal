@@ -1,4 +1,7 @@
+import { saveJournalEntry } from "./JournalDataProvider.js"
+
 const contentTarget = document.querySelector(".formContainer")
+const eventHub = document.querySelector(".container")
 
 export const JournalFormComponent = () => {
 
@@ -23,12 +26,29 @@ export const JournalFormComponent = () => {
                 <option>Great</option>
             </select>
         
-            <input type="submit" value="Record Journal Entry" id="submitButton"></fieldset>
+            <input type="submit" value="Record Journal Entry" id="recordButton"></fieldset>
 
         </fieldset>
         </form>
     
     
     `
-
 }
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "recordButton") {
+        const date = document.getElementById("journalDate").value
+        const concept = document.getElementById("conceptsCovered").value
+        const entry = document.getElementById("journalEntry").value
+        const mood = document.getElementById("moodForDay").value
+
+        const newEntry = {
+            date: date,
+            concept: concept,
+            entry: entry,
+            mood: mood
+        }
+
+        saveJournalEntry(newEntry)
+    }
+})
