@@ -39,15 +39,15 @@
         "label": "Not too great"
     },
     {
-    "id": 3,
+        "id": 3,
         "label": "Okay"
     },
     {
-    "id": 4,
+        "id": 4,
         "label": "Pretty good"
     },
     {
-    "id": 5,
+        "id": 5,
         "label": "Great"
     }
 ]
