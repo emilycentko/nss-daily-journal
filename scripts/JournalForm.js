@@ -1,9 +1,18 @@
 import { saveJournalEntry } from "./JournalDataProvider.js"
+import { getMoods, useMoods } from "./MoodProvider.js"
 
 const contentTarget = document.querySelector(".formContainer")
 const eventHub = document.querySelector(".container")
 
-export const JournalFormComponent = () => {
+export const moodSelect = () =>{
+    getMoods()
+    .then(() => {
+        const moods = useMoods()
+        JournalFormComponent(moods)
+    })
+}
+
+export const JournalFormComponent = allMoods => {
 
     contentTarget.innerHTML = `
         <form action="" class="journalForm">
@@ -19,11 +28,11 @@ export const JournalFormComponent = () => {
 
             <label for="moodForDay">Mood for the Day</label>
             <select name="moodForDay" id ="moodForDay">
-                <option>Sad</option>
-                <option>Not too great</option>
-                <option>Okay</option>
-                <option>Pretty good</option>
-                <option>Great</option>
+                ${
+                    allMoods.map((mood) => {
+                        return `<option value="${mood.id}">${mood.label}</option>`
+                    }).join("")
+                }
             </select>
         
             <input type="submit" value="Record Journal Entry" id="recordButton"></fieldset>
