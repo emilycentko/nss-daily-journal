@@ -5,28 +5,50 @@
       "date": "01-4-2021",
       "concept": "HTML & CSS",
       "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-      "mood": "Good"
+      "moodId": 4
     },
     {
       "id": 2,
       "date": "1-7-2021",
       "concept": "GitHub Workflow",
       "entry": "Worked on indivdual and group project GitHub workflow for pushing branches from command to GitHub",
-      "mood": "Ok"
+      "moodId": 3
     },
     {
       "id": 3,
       "date": "1-14-2021",
       "concept": "Java Script",
       "entry": "Exporting data from mulitple objects and functions in JavaScript",
-      "mood": "Good"
+      "moodId": 4
     },
     {
       "date": "2021-02-02",
       "concept": "API and fetch",
       "entry": "Introduced to fetch commands and using DATA from an API",
-      "mood": "Pretty good",
+      "moodId": 4,
       "id": 4
     }
-  ]
+  ],
+  "moods": [
+    {
+        "id": 1,
+        "label": "Sad"
+    },
+    {
+        "id": 2,
+        "label": "Not too great"
+    },
+    {
+        "id": 3,
+        "label": "Okay"
+    },
+    {
+        "id": 4,
+        "label": "Pretty good"
+    },
+    {
+        "id": 5,
+        "label": "Great"
+    }
+]
 }
