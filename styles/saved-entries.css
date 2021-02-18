@@ -1,0 +1,20 @@
+h2 {
+    font-family: 'Josefin Slab', serif;
+    text-align: center;
+}
+
+.entry__list {
+    margin: 40px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 4px 4px 30px -2px rgba(0, 0, 0, 0.19);
+    border-radius: 3px;
+}
+
+.journalEntry {
+    width: 400px;
+    border: 1px solid darkgreen;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+}

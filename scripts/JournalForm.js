@@ -6,6 +6,7 @@ const eventHub = document.querySelector(".container")
 
 const journalForm = (allMoods) => {
     formTarget.innerHTML = `
+        <h2>new journal entry</h2>
         <form action="" class="journalForm">
         <fieldset>
             <label for="journalDate">Date of Entry</label>
