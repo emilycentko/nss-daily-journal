@@ -21,10 +21,11 @@ export const EntryListComponent = () => {
             HTML representation of a single entry
         */
         entryLog.innerHTML += `
-        <div class="entry__list">
-            ${entriesHTMLRepresentation}
-        </div>
-        `
+            <div class="entry__list">
+                <h2>journal history</h2>
+                ${entriesHTMLRepresentation}
+            </div>
+            `
     })
 }
 
